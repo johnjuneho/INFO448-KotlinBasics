@@ -23,13 +23,13 @@ fun sub(lhs: Int, rhs: Int): Int = lhs - rhs
 fun mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) = op(lhs, rhs)
 
 // write a class "Person" with first name, last name and age
-class Person(var firstName: String, var lastName: String, var age: Int) {
+class Person(val firstName: String, val lastName: String, val age: Int) {
     val debugString: String
         get() = "[Person firstName:$firstName lastName:$lastName age:$age]"
 }
 
 // write a class "Money"
-class Money(var amount: Int, var currency: String) {
+class Money(val amount: Int, val currency: String) {
 
     init {
         require(amount >= 0) { "Amount cannot be less than zero." }
